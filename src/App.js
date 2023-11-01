@@ -1,9 +1,11 @@
 import React from 'react';
+import Gallery from './components/Gallery';
+
 
 export function App() {
     return (
         <div>
-            <h1> Kai Chen photography</h1>
+            <Gallery />
         </div>
     );
 };

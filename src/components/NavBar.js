@@ -23,6 +23,11 @@ const NavBar = () => {
                     Contact
                 </Link>
             </div>
+            <div className='nav-item'>
+                <Link className='nav-link' to='/gallery'>
+                    Gallery
+                </Link>
+            </div>
         </div>
     </div>
   )

@@ -11,6 +11,7 @@ const Gallery = () => {
         {images.map((el, idx)=> (
             <img className="gallery-images" key={idx} src={el} alt={`image ` + idx} />
         ))}
+
     </div>
   )
 }

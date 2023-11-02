@@ -56,11 +56,26 @@ a {
 
 }
 
-.gallery-images {
-    min-width: 20%;
-    max-width: 500px;
-    padding: 2%;
+@media screen and (min-width: 200px) {
+    .gallery-images {
+        max-width: 90%;
+    }
 }
+
+@media screen and (min-width: 900px) {
+    .gallery-images {
+        max-width: 45%;
+        padding: 1%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .gallery-images {
+        max-width: 30%;
+        padding: 1%;
+    }
+}
+
 
 .slide-in {
     position: fixed;

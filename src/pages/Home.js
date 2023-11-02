@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Home = () => {
   return (
     <div>
-        <h1>Home</h1>
+        <h1>Kai Chen Photography</h1>
         <motion.div 
                 className='slide-in'
                 initial={{ scaleY: 0 }}

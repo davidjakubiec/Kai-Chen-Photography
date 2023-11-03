@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Gallery from './components/Gallery';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
@@ -9,13 +9,19 @@ import GalleryPage from './pages/GalleryPage';
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 
+export const Context = React.createContext();
+
 
 export function App() {
 
     const location = useLocation();
+    const [navBarBackground, setNavBarBackground] = useState('transparent')
+
+    const contextObject = { navBarBackground, setNavBarBackground };
 
     return (
         <div>
+            <Context.Provider value={contextObject}>
             <NavBar />
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
@@ -25,6 +31,8 @@ export function App() {
                     <Route path='/gallery' element={<GalleryPage />}/>
                 </Routes>
             </AnimatePresence>
+            </Context.Provider>
+            
             
             {/* <Gallery /> */}
         </div>

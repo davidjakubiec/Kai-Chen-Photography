@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { Context } from '../App'
+
+
 import { motion } from 'framer-motion';
 
 const About = () => {
+    const {navBarBackground, setNavBarBackground} = useContext(Context);
+
+    useEffect(() => {
+        setNavBarBackground('transparent')
+    }, []);
+
   return (
     
     <div>

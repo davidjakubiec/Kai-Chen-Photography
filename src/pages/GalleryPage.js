@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { Context } from '../App'
+
+
 import Gallery from '../components/Gallery'
 import { motion } from 'framer-motion'
 
 const GalleryPage = () => {
+    const {navBarBackground, setNavBarBackground} = useContext(Context);
+
+    useEffect(() => {
+        setNavBarBackground('transparent')
+    }, []);
+
   return (
     <div>
         <Gallery />

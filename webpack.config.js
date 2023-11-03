@@ -39,7 +39,17 @@ module.exports = {
                         },
                     },
                 ],
-            }
+            }, 
+            {
+                test: /\.(MP4|mov)$/,
+                use: {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]', // Output the file with its original name and extension
+                    outputPath: 'videos/', // Output directory for the MP4 files (you can change this)
+                  },
+                },
+              }
         ]
     },
     plugins: [new MiniCssExtractPlugin()]

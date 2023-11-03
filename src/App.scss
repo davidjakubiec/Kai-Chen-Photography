@@ -5,10 +5,34 @@
     color: black;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
 html,
 body {
-    font-family: "Roslindale Display Condensed";
-    background: #c6d5c6;
+    font-family: "Roboto, sans-serif";
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place the video behind other content */
+}
+
+#video-background {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-gradient {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 100px;
 }
 
 .nav {
@@ -30,7 +54,7 @@ body {
 }
 
 h1 {
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,6 +83,7 @@ a {
 @media screen and (min-width: 200px) {
     .gallery-images {
         max-width: 90%;
+        padding: 1%
     }
 }
 
@@ -95,4 +120,43 @@ a {
     height: 100vh;
     background: black;
     transform-origin: top;
+}
+
+
+.nav-link {
+    letter-spacing: 0;
+    transition: letter-spacing 350ms ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:active {
+
+  letter-spacing: 5px;
+}
+
+.nav-link:after,
+.nav-link:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 380ms ease-in-out;
+  width: 0;
+}
+
+.nav-link:hover:after,
+.nav-link:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.nav-link:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
 }

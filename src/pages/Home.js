@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Context } from '../App'
 
 import { motion } from 'framer-motion'
-import videosource from '../../assets/videos/homepagevideo.MP4'
+import videosource from '../../assets/videos/mauidronefootage.MP4'
 
 const Home = () => {
 
@@ -20,7 +20,7 @@ useEffect(() => {
 
         </video>
 
-        <h1>Kai Chen Photography</h1>
+        <h1>Kai Chen <br/> Photography</h1>
 
         <motion.div 
                 className='slide-in'

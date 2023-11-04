@@ -29,11 +29,11 @@ const NavBar = () => {
                     Gallery
                 </Link>
             </div>
-            <div className='nav-item'>
+            {/* <div className='nav-item'>
                 <Link onClick={handleNavBarClick} className='nav-link' to='/contact'>
                     Contact
                 </Link>
-            </div>
+            </div> */}
 
         </div>
     </div>

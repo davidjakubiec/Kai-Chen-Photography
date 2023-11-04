@@ -14,6 +14,7 @@ const GalleryPage = () => {
 
   return (
     <div>
+        <div>Gallery</div>
         <Gallery />
         <motion.div 
                 className='slide-in'

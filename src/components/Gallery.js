@@ -9,11 +9,8 @@ import image4 from '../../assets/yosemite.jpg'
 
 const Gallery = () => {
     const images = [image1, image2, image3, image4];
-    const {navBarBackground, setNavBarBackground} = useContext(Context);
 
-    useEffect(() => {
-        setNavBarBackground('transparent')
-    }, []);
+
 
   return (
     <div id='gallery-container'>

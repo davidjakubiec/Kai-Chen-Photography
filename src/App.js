@@ -8,6 +8,8 @@ import GalleryPage from './pages/GalleryPage';
 
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
+// import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+
 
 export const Context = React.createContext();
 
@@ -19,22 +21,22 @@ export function App() {
 
     const contextObject = { navBarBackground, setNavBarBackground };
 
+
+
     return (
-        <div>
+        <div className='app-container'>
             <Context.Provider value={contextObject}>
             <NavBar />
-            <AnimatePresence mode="wait">
-                <Routes location={location} key={location.pathname}>
-                    <Route index element={<Home />}/>
-                    <Route path='/about' element={<About />}/>
-                    <Route path='/contact' element={<Contact />}/>
-                    <Route path='/gallery' element={<GalleryPage />}/>
-                </Routes>
-            </AnimatePresence>
+                <section className='home-container' id='home-container'>
+                    <Home />
+                </section>
+                <section className='about-container' id='about-container'>
+                    <About />
+                </section>
+                <section className='gallery-page-container' id='gallery-page-container'>
+                    <GalleryPage />
+                </section>
             </Context.Provider>
-            
-            
-            {/* <Gallery /> */}
         </div>
     );
 };

@@ -8,7 +8,7 @@ import image3 from '../../assets/sandiego.jpg'
 import image4 from '../../assets/yosemite.jpg'
 
 const Gallery = () => {
-    const images = [image3];
+    const images = [image1, image2, image3, image4];
 
 
 

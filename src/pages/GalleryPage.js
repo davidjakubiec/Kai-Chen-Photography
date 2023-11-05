@@ -8,8 +8,8 @@ const GalleryPage = () => {
 
 
   return (
-    <div>
-        <div className='gallery-title' >Gallery</div>
+    <div className='gallery-page-container'>
+
         <Gallery />
 
     </div>

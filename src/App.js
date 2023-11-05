@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import GalleryPage from './pages/GalleryPage';
+import Footer from './components/Footer';
 
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
@@ -35,6 +36,9 @@ export function App() {
                 </section>
                 <section className='gallery-page-container' id='gallery-page-container'>
                     <GalleryPage />
+                </section>
+                <section>
+                    <Footer />
                 </section>
             </Context.Provider>
         </div>

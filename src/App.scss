@@ -93,23 +93,53 @@ a {
     margin-left: 20%;
     margin-right: 10vh;
     margin-top: 10%;
-    font-size: 1.2em;
+    font-size: 1.5vw;
 }
 
 .about-photo-container {
     // background-color: blue;
-    height: 800px;
+    // height: 800px;
     width: 40vw;
     display: flex;
 }
 
 .about-photo {
-    // width: 100%;
+    width: 100%;
+
     margin: 1%;
     object-fit: cover;
     // z-index: -1;
 }
 
+@media screen and (max-width: 700px) {
+    .about-photo-container {
+        // background-color: blue;
+        // height: 800px;
+        width: 100vw;
+        display: flex;
+    }
+    
+    .about-photo {
+        width: 100%;
+    
+        margin: 1%;
+        object-fit: cover;
+        // z-index: -1;
+    }
+
+    .about-title {
+        // position: relative;
+        left: 33%;
+        top: 150vh;
+    }
+    
+    .about-paragraph {
+        margin-left: 20%;
+        margin-right: 10vh;
+        margin-top: 10%;
+        font-size: 1.5vw;
+    }
+}
 
 
 
@@ -123,17 +153,33 @@ a {
     color: transparent;
 }
 
-#gallery-container {
+.gallery-page-container {
+    // background-color: red;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: red;
+
+}
+
+#gallery-container {
+    overflow-x: auto; /* Enable horizontal scrolling when content overflows */
+    white-space: nowrap; 
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
+    width: 100vw; 
+    display: flex;
+    justify-content: start;
 }
 
 @media screen and (min-width: 200px) {
     .gallery-images {
         max-width: 100%;
         max-height: 100vh;
+        flex: 0 0 100vw; /* Each image takes the full viewport width */
+        // height: 100vh; /* Each image takes the full viewport height */
+        object-fit: cover; /* Ensure the images cover the entire container */
+        scroll-snap-align: start; 
+        margin-right: 1%;
+        object-fit: contain;
         // padding: 1%;
         // justify-content: space-between;
     }
@@ -209,3 +255,15 @@ img {
     padding-bottom: 0.2%;
 }
 
+.footer {
+    font-family: 'Open Sans', sans-serif;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div::-webkit-scrollbar {
+    width: 0; /* Set the width of the scrollbar to 0 */
+  }

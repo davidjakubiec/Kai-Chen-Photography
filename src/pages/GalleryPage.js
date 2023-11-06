@@ -8,7 +8,7 @@ const GalleryPage = () => {
 
 
   return (
-    <div className='gallery-page-container'>
+    <div >
 
         <Gallery />
 

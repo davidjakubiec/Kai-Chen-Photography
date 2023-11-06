@@ -154,9 +154,9 @@ a {
 }
 
 .gallery-page-container {
-    // background-color: red;
+    width: 100vw; 
+    height: 100vh;
     display: flex;
-
 }
 
 #gallery-container {
@@ -166,6 +166,7 @@ a {
     overflow-x: scroll; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
     width: 100vw; 
+    height: 100vh;
     display: flex;
     justify-content: start;
 }
@@ -256,7 +257,7 @@ img {
 }
 
 .footer {
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     height: 15vh;
     display: flex;
     justify-content: center;

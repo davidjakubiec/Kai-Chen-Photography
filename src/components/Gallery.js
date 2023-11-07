@@ -44,8 +44,10 @@ const Gallery = () => {
         ))}
 
     </div>
-    <button onClick={scrollPrev}>left</button>
-        <button onClick={scrollNext}> right</button>
+    <div className='button-container'>
+        <button onClick={scrollPrev}>{"<"}</button>
+        <button onClick={scrollNext}>{">"}</button>
+    </div>
     </div>
   )
 }

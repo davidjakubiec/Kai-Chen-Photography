@@ -177,6 +177,15 @@ a {
     z-index: 100;
 }
 
+.gallery-arrow-buttons {
+    width: 20px;
+    height: 20px;
+}
+
+.gallery-arrow-buttons:hover {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 200px) {
     .gallery-images {
         max-width: 100%;
@@ -225,7 +234,7 @@ a {
 
 .nav-link:hover,
 .nav-link:active {
-
+color: black;
   letter-spacing: 1px;
 }
 

@@ -45,8 +45,8 @@ const Gallery = () => {
 
     </div>
     <div className='button-container'>
-        <button onClick={scrollPrev}>{"<"}</button>
-        <button onClick={scrollNext}>{">"}</button>
+        <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/486232/left-arrow-backup-2.svg' onClick={scrollPrev}></img>
+        <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/520912/right-arrow.svg' onClick={scrollNext}></img>
     </div>
     </div>
   )

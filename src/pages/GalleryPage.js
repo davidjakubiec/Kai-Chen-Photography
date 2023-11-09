@@ -11,7 +11,6 @@ const GalleryPage = () => {
     <div >
 
         <Gallery />
-
     </div>
   )
 }

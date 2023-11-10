@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Context } from '../App'
+import GalleryDots from './GalleryDots'
 
     
 import image1 from '../../assets/bigsur.jpg'
@@ -69,6 +70,7 @@ const Gallery = () => {
         <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/486232/left-arrow-backup-2.svg' onClick={scrollPrev}></img>
         <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/520912/right-arrow.svg' onClick={scrollNext}></img>
     </div>
+    <GalleryDots/>
     </div>
   )
 }

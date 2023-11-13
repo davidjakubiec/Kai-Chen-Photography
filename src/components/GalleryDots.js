@@ -2,7 +2,12 @@ import React from 'react'
 
 const GalleryDots = () => {
   return (
-    <div>GalleryDots</div>
+    <div>
+        <div className='gallery-dots'></div>
+        <div className='gallery-dots'></div>
+        <div className='gallery-dots'></div>
+        <div className='gallery-dots'></div>
+    </div>
   )
 }
 

@@ -183,6 +183,18 @@ a {
     // z-index: 100;
 }
 
+.arrow-button-container {
+    transition: opacity 0.5s ease; /* Transition for opacity */
+    opacity: 1;
+}
+.arrow-button-container.visible {
+    opacity: 1;
+}
+.arrow-button-container.hidden {
+    opacity: 0;
+    pointer-events: none; 
+}
+
 .gallery-arrow-left-button {
     position: absolute;
     transform: translate(5vw, -60vh);
@@ -193,8 +205,6 @@ a {
     font-weight: 700;
     color: rgba(white, 0.5);
     font-family: 'Poppins', sans-serif;
-    transition: opacity 0.5s ease; /* Transition for opacity */
-
 }
 
 .gallery-arrow-left-button:hover {

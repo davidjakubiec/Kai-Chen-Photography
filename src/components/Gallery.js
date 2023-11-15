@@ -123,8 +123,10 @@ const Gallery = () => {
     
     <div className='button-container'>
         {/* <div className='captions'>{captions[currImageIdx]}</div> */}
-        <div className='gallery-arrow-left-button' onClick={scrollPrev}>{isVisible && "<"}</div>
-        <div className='gallery-arrow-right-button' onClick={scrollNext}>{isVisible && ">"}</div>
+        <div className={`arrow-button-container ${isVisible ? 'visible' : 'hidden'}`}>
+          <div className='gallery-arrow-left-button' onClick={scrollPrev}>{"<"}</div>
+          <div className='gallery-arrow-right-button' onClick={scrollNext}>{">"}</div>
+        </div>
     </div>
         <div className='dots-container'>{dots}</div>
     </div>

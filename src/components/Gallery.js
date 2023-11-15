@@ -16,6 +16,25 @@ const Gallery = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [currImageIdx, setcurrImageIdx] = useState(0);
 
+    const dots = [];
+    for (let i = 0; i < images.length; i++) {
+      dots.push(<div className='gallery-dots' key={i}></div>)
+    }
+
+    useEffect(() => {
+      const divs = document.querySelectorAll('.gallery-dots');
+
+      divs.forEach((div, index) => {
+        if (index === currImageIdx) {
+          div.style.transition = 'background-color 0.5s ease-in-out';
+          div.style.backgroundColor = 'yellow'; // Highlighted color
+        } else {
+          div.style.transition = 'background-color 0.5s ease-in-out';
+          div.style.backgroundColor = ''; // Standard color
+        }
+      });
+    }, [currImageIdx]);
+
     const scrollNext = () => {
       const scrollContainer = scrollContainerRef.current;
       const scrollWidth = scrollContainer.scrollWidth;
@@ -70,7 +89,10 @@ const Gallery = () => {
         <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/486232/left-arrow-backup-2.svg' onClick={scrollPrev}></img>
         <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/520912/right-arrow.svg' onClick={scrollNext}></img>
     </div>
-    <GalleryDots/>
+        {images.forEach((el, idx) => {
+
+        })}
+        <div>{dots}</div>
     </div>
   )
 }

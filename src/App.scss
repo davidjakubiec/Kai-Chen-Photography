@@ -160,6 +160,7 @@ a {
 }
 
 #gallery-container {
+    position: relative;
     overflow-x: auto; /* Enable horizontal scrolling when content overflows */
     white-space: nowrap; 
     display: flex;
@@ -172,14 +173,45 @@ a {
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    z-index: 100;
+    position: absolute;
+    // background-color: red;
+    // transform: translate(0%, 0%);
+    width: 100vw;
+    height: 10vh;
+    // display: flex;
+    // justify-content: space-around;
+    // z-index: 100;
 }
 
-.gallery-arrow-buttons {
+.gallery-arrow-left-button {
+    position: absolute;
+    transform: translate(5vw, -60vh);
     width: 20px;
     height: 20px;
+    z-index: 101;
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(white, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+.gallery-arrow-left-button:hover {
+    cursor: pointer;
+}
+
+.gallery-arrow-right-button {
+    position: absolute;
+    transform: translate(90vw, -60vh);
+    width: 20px;
+    height: 20px;
+    z-index: 101;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gallery-arrow-right-button:hover {
+    cursor: pointer;
 }
 
 .gallery-arrow-buttons:hover {
@@ -202,12 +234,19 @@ a {
 }
 
 .gallery-dots {
-    width: 100px; /* Set the width of the circle */
-    height: 100px; /* Set the height of the circle */
+    width: 10px; /* Set the width of the circle */
+    height: 10px; /* Set the height of the circle */
     background-color: white; /* Set the background color to white */
     border-radius: 50%; 
 }
 
+.dots-container {
+    display:flex;
+    // background-color: green;
+    width: 50vw;
+    justify-content: space-around;
+    margin-left: 25vw;
+}
 
 
 .nav {

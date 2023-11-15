@@ -85,14 +85,11 @@ const Gallery = () => {
     </div>
     
     <div className='button-container'>
-        <div>{captions[currImageIdx]}</div>
-        <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/486232/left-arrow-backup-2.svg' onClick={scrollPrev}></img>
-        <img className='gallery-arrow-buttons' src='https://www.svgrepo.com/show/520912/right-arrow.svg' onClick={scrollNext}></img>
+        {/* <div className='captions'>{captions[currImageIdx]}</div> */}
+        <div className='gallery-arrow-left-button' onClick={scrollPrev}>{"<"}</div>
+        <div className='gallery-arrow-right-button' onClick={scrollNext}>{">"}</div>
     </div>
-        {images.forEach((el, idx) => {
-
-        })}
-        <div>{dots}</div>
+        <div className='dots-container'>{dots}</div>
     </div>
   )
 }

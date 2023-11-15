@@ -193,10 +193,13 @@ a {
     font-weight: 700;
     color: rgba(white, 0.5);
     font-family: 'Poppins', sans-serif;
+    transition: opacity 0.5s ease; /* Transition for opacity */
+
 }
 
 .gallery-arrow-left-button:hover {
     cursor: pointer;
+    color: rgba(white, 0.8);
 }
 
 .gallery-arrow-right-button {
@@ -208,14 +211,12 @@ a {
     font-size: 100px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
+    color: rgba(white, 0.5);
 }
 
 .gallery-arrow-right-button:hover {
     cursor: pointer;
-}
-
-.gallery-arrow-buttons:hover {
-    cursor: pointer;
+    color: rgba(white, 0.8);
 }
 
 @media screen and (min-width: 200px) {
@@ -236,7 +237,7 @@ a {
 .gallery-dots {
     width: 10px; /* Set the width of the circle */
     height: 10px; /* Set the height of the circle */
-    background-color: white; /* Set the background color to white */
+    background-color: rgba(white, 0.5); /* Set the background color to white */
     border-radius: 50%; 
 }
 

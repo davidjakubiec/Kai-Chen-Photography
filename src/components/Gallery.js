@@ -39,6 +39,7 @@ const Gallery = () => {
     document.addEventListener('keypress', handleUserActivity);
     document.addEventListener('touchstart', handleUserActivity);
     document.addEventListener('click', handleUserActivity);
+    document.addEventListener('scroll', handleUserActivity);
 
     // Initial setup to start the countdown
     resetTimer();
@@ -49,6 +50,7 @@ const Gallery = () => {
       document.removeEventListener('keypress', handleUserActivity);
       document.removeEventListener('touchstart', handleUserActivity);
       document.removeEventListener('click', handleUserActivity);
+      document.removeEventListener('scroll', handleUserActivity);
       clearTimeout(timeoutId);
     };
   }, []);

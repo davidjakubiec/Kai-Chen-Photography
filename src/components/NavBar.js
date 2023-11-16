@@ -1,8 +1,36 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Context } from '../App'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
+    const [currPage, setCurrPage] = useState('home');
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY >= document.getElementById('gallery-page-container').offsetTop) {
+          setCurrPage('gallery')
+        } else if (window.scrollY >= document.getElementById('about-container').offsetTop) {
+          setCurrPage('about')
+        }
+        else if (window.scrollY >= document.getElementById('home-container').offsetTop) {
+          setCurrPage('home')
+        }
+
+        // console.log('home', document.getElementById('about-container').offsetTop)
+        // console.log('home', window.scrollY, document.getElementById('about-container').offsetTop)
+
+        console.log(document.getElementsByClassName('nav-link'))
+        console.log(currPage)
+      }
+
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+        
+      
+    }, [currPage]);
+
     const scrollHome = () => {
         // Find the DOM node of the section you want to scroll to
         const section = document.getElementById('home-container');

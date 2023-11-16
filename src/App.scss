@@ -291,7 +291,7 @@ a {
 
 .nav-link:hover,
 .nav-link:active {
-color: black;
+// color: black;
   letter-spacing: 1px;
 }
 
@@ -311,7 +311,7 @@ color: black;
 .nav-link:hover:after,
 .nav-link:hover:before {
   backface-visibility: hidden;
-  border-color: #ffffff;
+  border-color: white;
   transition: width 350ms ease-in-out;
   width: 70%;
 }

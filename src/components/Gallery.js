@@ -129,8 +129,10 @@ const Gallery = () => {
           <div className='gallery-arrow-left-button' onClick={scrollPrev}>{"<"}</div>
           <div className='gallery-arrow-right-button' onClick={scrollNext}>{">"}</div>
         </div>
+        <button>adsflkasdf;</button>
     </div>
         <div className='dots-container'>{dots}</div>
+        
     </div>
   )
 }

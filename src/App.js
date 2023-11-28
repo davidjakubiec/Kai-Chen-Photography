@@ -37,9 +37,9 @@ export function App() {
                 <section className='gallery-page-container' id='gallery-page-container'>
                     <GalleryPage />
                 </section>
-                <section>
+                {/* <section>
                     <Footer />
-                </section>
+                </section> */}
             </Context.Provider>
         </div>
     );
